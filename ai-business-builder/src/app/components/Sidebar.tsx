@@ -1,12 +1,16 @@
 "use client";
 
-import { LayoutDashboard, Settings, LogOut } from "lucide-react";
+import { LayoutDashboard, Briefcase, BarChart2, Users, CreditCard, Settings, LogOut } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Settings", href: "/dashboard/settings", icon: Settings },
+  { label: "Dashboard",  href: "/dashboard",            icon: LayoutDashboard },
+  { label: "Businesses", href: "/dashboard/businesses", icon: Briefcase },
+  { label: "Analytics",  href: "/dashboard/analytics",  icon: BarChart2 },
+  { label: "Users",      href: "/dashboard/users",      icon: Users },
+  { label: "Billing",    href: "/dashboard/billing",    icon: CreditCard },
+  { label: "Settings",   href: "/dashboard/settings",   icon: Settings },
 ];
 
 export default function Sidebar() {
