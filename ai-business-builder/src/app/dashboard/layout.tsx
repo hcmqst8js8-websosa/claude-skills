@@ -1,18 +1,12 @@
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import Sidebar from "@/components/Sidebar"
 
-export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DashboardLayout({ children }) {
   return (
-    <div className="flex h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="flex">
       <Sidebar />
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <Topbar />
-        <main className="flex-1 overflow-y-auto p-6">{children}</main>
-      </div>
+      <main className="flex-1 p-10">
+        {children}
+      </main>
     </div>
-  );
+  )
 }
